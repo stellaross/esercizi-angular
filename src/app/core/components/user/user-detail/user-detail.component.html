@@ -1,1 +1,23 @@
 <h4>user-detail.component</h4>
+<p>id:{{ user.id }}</p>
+<p>name:{{ user.name }}</p>
+<p>surname: {{ user.surname }}</p>
+<p>age: {{ user.age }}</p>
+<p>date of birth: {{ user.dateOfBirth | date: "dd-MMM-yyyy" }}</p>
+<h4>Address</h4>
+<p>city: {{ user.address.city }}</p>
+<p>city: {{ user.address.street }}</p>
+<p>city: {{ user.address.postalCode }}</p>
+<p>role: {{ user.role }}</p>
+<p>role: {{ user.username }}</p>
+<img src="{{ user.profilePhotoUrl }}" width="200px" alt="img-cat" />
+<p>gender: {{ user.gender }}</p>
+<div *ngFor="let company of user.companies">
+  <p><strong>Company:</strong>{{ company.name }}</p>
+  <p>Description :{{ company.description }}</p>
+</div>
+
+<!-- <h5>company:{{ user.companies[0].name }}</h5>
+<p>description:{{ user.companies[0].description }}</p>
+<h5>company:{{ user.companies[1].name }}</h5>
+<p>description:{{ user.companies[0].description }}</p> -->
