@@ -10,6 +10,7 @@ import { UserDetailComponent } from './core/components/user/user-detail/user-det
 import { OrderListComponent } from './core/components/order/order-list/order-list.component';
 import { OrderSingleComponent } from './core/components/order/order-single/order-single.component';
 import { OrderDetailComponent } from './core/components/order/order-detail/order-detail.component';
+import { UserSinglesComponent } from './core/components/user/user-singles/user-singles.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { OrderDetailComponent } from './core/components/order/order-detail/order
     UserDetailComponent,
     OrderListComponent,
     OrderSingleComponent,
-    OrderDetailComponent
+    OrderDetailComponent,
+    UserSinglesComponent
   ],
   imports: [
     BrowserModule
