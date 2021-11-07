@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ObjInt } from 'src/app/models/UserObj';
 
 @Component({
@@ -8,8 +8,13 @@ import { ObjInt } from 'src/app/models/UserObj';
 })
 export class UserSinglesComponent implements OnInit {
   @Input() boxItem: ObjInt[] = [];
+  @Output() item = new EventEmitter<ObjInt>();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  deleteItem(item: ObjInt) {
+    this.item.emit(item);
+  }
 }

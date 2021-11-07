@@ -1,3 +1,4 @@
+import { identifierModuleUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ObjInt, Gender, Role } from 'src/app/models/UserObj';
 
@@ -61,4 +62,8 @@ export class UserListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  deleteElement(item: ObjInt) {
+    this.user = this.user.filter((user) => user.id !== item.id);
+  }
 }

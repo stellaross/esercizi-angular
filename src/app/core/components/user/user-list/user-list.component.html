@@ -10,5 +10,8 @@
     </p> -->
   </div>
 
-  <ang-user-singles [boxItem]="user"></ang-user-singles>
+  <ang-user-singles
+    [boxItem]="user"
+    (item)="deleteElement($event)"
+  ></ang-user-singles>
 </div>
