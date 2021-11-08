@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ObjInt } from 'src/app/models/UserObj';
+import { ObjInt, Role, Gender } from 'src/app/models/UserObj';
 
 @Component({
   selector: 'ang-user-singles',
@@ -14,7 +14,7 @@ export class UserSinglesComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  deleteItem(item: ObjInt) {
-    this.item.emit(item);
+  deleteItem(user: ObjInt) {
+    this.item.emit(user);
   }
 }
