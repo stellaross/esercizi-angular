@@ -1,0 +1,16 @@
+<p
+  [ngClass]="{
+    'border-purple': item.role == 'staff',
+    'border-red': item.role == 'manager',
+    'border-black': item.role == 'admin'
+  }"
+  *ngFor="let item of boxItem; index as i"
+  #item
+>
+  {{ i + 1 }}
+  <img src="{{ item.profilePhotoUrl }}" alt="foto" width="40rem" />
+  <strong> {{ item.name }}{{ item.surname }}</strong>
+  {{ item.age }}
+  {{ item.address.city }}
+  <button (click)="deleteItem(item)">delete</button>
+</p>
